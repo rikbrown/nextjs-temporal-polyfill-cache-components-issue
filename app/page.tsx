@@ -1,4 +1,6 @@
-/** Add your relevant code here for the issue to reproduce */
+import('temporal-polyfill/global')
+
 export default function Home() {
-  return null;
+  const parsed = Temporal.Instant.from('2026-01-01T12:34:56Z');
+  return <>{parsed.toString()}</>;
 }
